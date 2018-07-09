@@ -22,8 +22,8 @@ autocmd FileType python setlocal completeopt-=preview
 [[plugins]]
 repo = 'zchee/deoplete-jedi'
 on_ft = 'python'
-hook_add = '''
-let g:deoplete#sources#jedi#python_path = '/usr/bin/python3'
-'''
+# hook_add = '''
+# let g:deoplete#sources#jedi#python_path = '/usr/bin/env python3'
+# '''
 
 
