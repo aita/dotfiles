@@ -40,3 +40,6 @@ alias vi=nvim
 # go
 export GOPATH="$HOME/go"
 export PATH="$GOPATH/bin:$PATH"
+
+# $HOME/.local
+export PATH="$HOME/.local/bin:$PATH"
