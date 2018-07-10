@@ -3,6 +3,7 @@
 ROOT_DIR=$(cd $(dirname $0) && pwd)
 UNAME=`uname`
 
+ln -sv $ROOT_DIR/.gitconfig $HOME
 ln -sv $ROOT_DIR/.zshrc $HOME
 
 mkdir -v $HOME/.config
