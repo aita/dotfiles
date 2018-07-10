@@ -26,4 +26,6 @@ on_ft = 'python'
 # let g:deoplete#sources#jedi#python_path = '/usr/bin/env python3'
 # '''
 
-
+[[plugins]]
+repo = 'copy/deoplete-ocaml'
+on_ft = 'ocaml'
