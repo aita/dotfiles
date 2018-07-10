@@ -6,7 +6,7 @@ UNAME=`uname`
 ln -sv $ROOT_DIR/.zshrc $HOME
 
 mkdir -v $HOME/.config
-ln -sv $ROOT_DIR/nvim $HOME/.config/
+ln -sv $ROOT_DIR/nvim $HOME/.config
 
 ln -sv $ROOT_DIR/.tmux.conf $HOME
 if [ "$UNAME" = "Darwin" ]; then
