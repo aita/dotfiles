@@ -6,3 +6,12 @@ hook_add = 'let g:deoplete#enable_at_startup = 1'
 repo = 'Shougo/unite.vim'
 on_source = ['unite.vim']
 
+[[plugins]]
+repo = 'scrooloose/nerdcommenter'
+
+[[plugins]]
+repo = 'ntpeters/vim-better-whitespace'
+hook_add = '''
+let g:better_whitespace_enabled=1
+let g:strip_whitespace_on_save=1
+'''

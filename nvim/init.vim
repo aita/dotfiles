@@ -1,25 +1,24 @@
-"show numbers
 set nu
-
-"backspace
 set backspace=start,eol,indent
-
-"indent
 set autoindent
 set smartindent
-
-"case-insentive
 set ignorecase
 set smartcase
 
-"misc
 set showcmd
 set noswapfile
 
+" set space as the <Leader> key"
+let mapleader = "\<Space>"
+set timeoutlen=3000
+
+" disable completeopt preview
+set completeopt-=preview
+
 "merlin
 let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
-execute "set rtp+=" . g:opamshare . "/merlin/vim"
-execute "set rtp^=" . g:opamshare . "/ocp-indent/vim"
+execute "set rtp^=" . g:opamshare . "/merlin/vim"
+execute "set rtp+=" . g:opamshare . "/ocp-indent/vim"
 
 
 "dein Scripts-----------------------------
@@ -48,9 +47,9 @@ if dein#load_state(s:dein_dir)
 endif
 
 " If you want to install not installed plugins on startup.
-"if dein#check_install()
-"  call dein#install()
-"endif
+if dein#check_install()
+  call dein#install()
+endif
 
 "End dein Scripts-------------------------
 
