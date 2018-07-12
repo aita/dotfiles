@@ -6,6 +6,9 @@ set ignorecase
 set smartcase
 
 set showcmd
+set hidden
+set autoread
+set nobackup
 set noswapfile
 
 " set space as the <Leader> key"
