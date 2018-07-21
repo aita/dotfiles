@@ -20,9 +20,6 @@ let g:jedi#completions_enabled = 0
 [[plugins]]
 repo = 'zchee/deoplete-jedi'
 on_ft = 'python'
-# hook_add = '''
-# let g:deoplete#sources#jedi#python_path = '/usr/bin/env python3'
-# '''
 
 [[plugins]]
 repo = 'copy/deoplete-ocaml'
