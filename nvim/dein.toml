@@ -8,6 +8,12 @@ on_source = ['unite.vim']
 
 [[plugins]]
 repo = 'scrooloose/nerdcommenter'
+hook_add = '''
+let g:NERDSpaceDelims = 1
+let g:NERDCustomDelimiters = {
+  \     'ocaml': { 'left': '(*', 'right': '*)' }
+  \ }
+'''
 
 [[plugins]]
 repo = 'ntpeters/vim-better-whitespace'
