@@ -15,6 +15,20 @@ set noswapfile
 let mapleader = "\<Space>"
 set timeoutlen=3000
 
+" mapping for <Leader> key
+nnoremap <Leader>t :tabnew<CR>
+nnoremap <Leader>n gt
+nnoremap <Leader>p gT
+" nnoremap <Leader>o :CtrlP<CR>
+nnoremap <Leader>w :w<CR>
+" unite
+nnoremap <Leader>uu :Unite<Space>
+nnoremap <Leader>uf :Unite file<CR>
+nnoremap <Leader>ub :Unite buffer_tab<CR>
+nnoremap <Leader>uB :Unite buffer<CR>
+nnoremap <Leader>ur :Unite register<CR>
+nnoremap <Leader>ut :Unite tab<CR>
+
 " disable completeopt preview
 set completeopt-=preview
 
