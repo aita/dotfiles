@@ -28,6 +28,11 @@ nnoremap <Leader>ub :Unite buffer_tab<CR>
 nnoremap <Leader>uB :Unite buffer<CR>
 nnoremap <Leader>ur :Unite register<CR>
 nnoremap <Leader>ut :Unite tab<CR>
+nnoremap <Leader>ug :Unite vimgrep<CR>
+nnoremap <Leader>um :Unite mapping<CR>
+" bookmark
+nnoremap <Leader>b :UniteBookmarkAdd<CR>
+nnoremap <Leader>B :Unite bookmark<CR>
 
 " disable completeopt preview
 set completeopt-=preview
