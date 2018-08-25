@@ -4,7 +4,8 @@ ROOT_DIR=$(cd $(dirname $0) && pwd)
 UNAME=`uname`
 
 ln -sv $ROOT_DIR/.gitconfig $HOME
-ln -sv $ROOT_DIR/.zshrc $HOME
+ln -sv $ROOT_DIR/.bashrc $HOME
+ln -sv $ROOT_DIR/.bash_profile $HOME
 
 mkdir -v $HOME/.config
 ln -sv $ROOT_DIR/nvim $HOME/.config
