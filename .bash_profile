@@ -24,8 +24,22 @@ export PATH="$HOME/.local/bin:$PATH"
 # bash-completion
 [ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
 
+if [ "$(uname -s)" = "Darwin" ]; then
+    # findutils
+    export PATH="/usr/local/opt/findutils/libexec/gnubin:$PATH"
+    export MANPATH="/usr/local/opt/findutils/libexec/gnuman:$MANPATH"
+    # coreutils
+    export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+    export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+    # gnu sed
+    export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
+    # gnu tar
+    export PATH="/usr/local/opt/gnu-tar/libexec/gnubin:$PATH"
+    # gnu grep
+    export PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
 
-if [ -f ~/.bashrc ] ; then
-. ~/.bashrc
+    if [ -f ~/.bashrc ] ; then
+        . ~/.bashrc
+    fi
 fi
 
