@@ -33,10 +33,13 @@ if [ "$(uname -s)" = "Darwin" ]; then
     export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
     # gnu sed
     export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
+    export MANPATH="/usr/local/opt/gnu-sed/libexec/gnuman:$MANPATH"
     # gnu tar
     export PATH="/usr/local/opt/gnu-tar/libexec/gnubin:$PATH"
+    export MANPATH="/usr/local/opt/gnu-tar/libexec/gnuman:$MANPATH"
     # gnu grep
     export PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
+    export MANPATH="/usr/local/opt/grep/libexec/gnuman:$MANPATH"
 
     if [ -f ~/.bashrc ] ; then
         . ~/.bashrc
