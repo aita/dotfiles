@@ -20,6 +20,10 @@ export PATH="$HOME/.cargo/bin:$PATH"
 # $HOME/.local
 export PATH="$HOME/.local/bin:$PATH"
 
+# bash-completion
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
+
+
 if [ -f ~/.bashrc ] ; then
 . ~/.bashrc
 fi
