@@ -10,6 +10,7 @@ alias vi=nvim
 
 # Go
 export GOPATH=$HOME/go
+export PATH="$GOPATH/bin:$PATH"
 
 # OPAM configuration
 . /Users/ryoaita/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
