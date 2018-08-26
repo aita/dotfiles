@@ -1,13 +1,3 @@
-# Python
-alias python=python3
-alias pip=pip3
-
-# Vim
-export VISUAL=nvim
-export EDITOR=nvim
-alias vim=nvim
-alias vi=nvim
-
 # Go
 export GOPATH=$HOME/go
 export PATH="$GOPATH/bin:$PATH"
@@ -20,9 +10,6 @@ export PATH="$HOME/.cargo/bin:$PATH"
 
 # $HOME/.local
 export PATH="$HOME/.local/bin:$PATH"
-
-# bash-completion
-[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
 
 if [ "$(uname -s)" = "Darwin" ]; then
     # findutils
