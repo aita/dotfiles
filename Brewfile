@@ -23,3 +23,5 @@ brew "gawk"
 brew "diffutils"
 brew "less"
 brew "lv"
+brew "git"
+
