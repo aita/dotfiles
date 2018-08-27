@@ -16,16 +16,18 @@ let mapleader = "\<Space>"
 set timeoutlen=3000
 
 " mapping for <Leader> key
+" nnoremap <Leader>o :CtrlP<CR>
+nnoremap <Leader>w :w<CR>
+nnoremap <Leader>q :q<CR>
+" tab
 nnoremap <Leader>t :tabnew<CR>
 nnoremap <Leader>n gt
 nnoremap <Leader>p gT
-" nnoremap <Leader>o :CtrlP<CR>
-nnoremap <Leader>w :w<CR>
 " unite
 nnoremap <Leader>uu :Unite<Space>
 nnoremap <Leader>uf :Unite file<CR>
-nnoremap <Leader>ub :Unite buffer_tab<CR>
-nnoremap <Leader>uB :Unite buffer<CR>
+nnoremap <Leader>ub :Unite buffer<CR>
+nnoremap <Leader>uB :Unite buffer_tab<CR>
 nnoremap <Leader>ur :Unite register<CR>
 nnoremap <Leader>ut :Unite tab<CR>
 nnoremap <Leader>ug :Unite vimgrep<CR>
