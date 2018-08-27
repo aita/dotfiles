@@ -24,4 +24,5 @@ brew "diffutils"
 brew "less"
 brew "lv"
 brew "git"
+brew "fasd"
 

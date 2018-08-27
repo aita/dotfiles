@@ -35,3 +35,7 @@ export HISTFILESIZE=100000               # big big history
 GIT_PS1_SHOWDIRTYSTATE=true
 export PS1='\[\033[37m\][\[\033[36m\]\u\[\033[37m\]@\h \[\033[32m\]\W\[\033[37m\]]\[\033[31m\]$(__git_ps1)\[\033[00m\] \$ '
 
+
+# fasd
+eval "$(fasd --init auto)"
+
