@@ -30,6 +30,11 @@ nnoremap <Leader>ub :Unite buffer<CR>
 nnoremap <Leader>uB :Unite buffer_tab<CR>
 nnoremap <Leader>ur :Unite register<CR>
 nnoremap <Leader>ut :Unite tab<CR>
+nnoremap <Leader>ug :Unite vimgrep<CR>
+nnoremap <Leader>um :Unite mapping<CR>
+" bookmark
+nnoremap <Leader>b :UniteBookmarkAdd<CR>
+nnoremap <Leader>B :Unite bookmark<CR>
 
 " disable completeopt preview
 set completeopt-=preview
@@ -65,10 +70,10 @@ if dein#load_state(s:dein_dir)
   call dein#save_state()
 endif
 
-" If you want to install not installed plugins on startup.
-if dein#check_install()
-  call dein#install()
-endif
+" " If you want to install not installed plugins on startup.
+" if dein#check_install()
+"   call dein#install()
+" endif
 
 "End dein Scripts-------------------------
 
