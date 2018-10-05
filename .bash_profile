@@ -8,6 +8,10 @@ export PATH="$GOPATH/bin:$PATH"
 # Rust
 export PATH="$HOME/.cargo/bin:$PATH"
 
+# RBENV
+eval "$(rbenv init -)"
+
+
 # $HOME/.local
 export PATH="$HOME/.local/bin:$PATH"
 

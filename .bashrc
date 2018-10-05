@@ -144,3 +144,5 @@ alias pip=pip3
 shopt -u histappend
 
 
+# fasd
+eval "$(fasd --init auto)"
