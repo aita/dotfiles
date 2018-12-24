@@ -18,3 +18,5 @@ Session.vim
 tags
 # Persistent undo
 [._]*.un~
+fish/fishd.*
+fish/fish_universal_variables
