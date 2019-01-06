@@ -1,13 +1,11 @@
 ;;; irony-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-
-(add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory #$) (car load-path))))
-
+(add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "irony" "irony.el" (0 0 0 0))
-;;; Generated autoloads from irony.el
+;;;### (autoloads nil "irony" "../../../../.emacs.d/elpa/irony-20181218.2241/irony.el"
+;;;;;;  "065ba28df107864c1099f154c0c86380")
+;;; Generated autoloads from ../../../../.emacs.d/elpa/irony-20181218.2241/irony.el
 
 (defvar irony-additional-clang-options nil "\
 Additional command line options to pass down to libclang.
@@ -43,12 +41,11 @@ Get the type of symbol under cursor.
 
 \(fn)" t nil)
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "irony" '("irony-")))
-
 ;;;***
 
-;;;### (autoloads nil "irony-cdb" "irony-cdb.el" (0 0 0 0))
-;;; Generated autoloads from irony-cdb.el
+;;;### (autoloads nil "irony-cdb" "../../../../.emacs.d/elpa/irony-20181218.2241/irony-cdb.el"
+;;;;;;  "350719950cdfa44f4e620c9463b7dfb5")
+;;; Generated autoloads from ../../../../.emacs.d/elpa/irony-20181218.2241/irony-cdb.el
 
 (autoload 'irony-cdb-autosetup-compile-options "irony-cdb" "\
 
@@ -60,26 +57,22 @@ Get the type of symbol under cursor.
 
 \(fn)" t nil)
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "irony-cdb" '("irony-cdb-")))
-
 ;;;***
 
-;;;### (autoloads nil "irony-cdb-clang-complete" "irony-cdb-clang-complete.el"
-;;;;;;  (0 0 0 0))
-;;; Generated autoloads from irony-cdb-clang-complete.el
+;;;### (autoloads nil "irony-cdb-clang-complete" "../../../../.emacs.d/elpa/irony-20181218.2241/irony-cdb-clang-complete.el"
+;;;;;;  "c61e5aa72b58a89991c6f144bee28684")
+;;; Generated autoloads from ../../../../.emacs.d/elpa/irony-20181218.2241/irony-cdb-clang-complete.el
 
 (autoload 'irony-cdb-clang-complete "irony-cdb-clang-complete" "\
 
 
 \(fn COMMAND &rest ARGS)" nil nil)
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "irony-cdb-clang-complete" '("irony-cdb-clang-complete--")))
-
 ;;;***
 
-;;;### (autoloads nil "irony-cdb-json" "irony-cdb-json.el" (0 0 0
-;;;;;;  0))
-;;; Generated autoloads from irony-cdb-json.el
+;;;### (autoloads nil "irony-cdb-json" "../../../../.emacs.d/elpa/irony-20181218.2241/irony-cdb-json.el"
+;;;;;;  "cee6533475aad95ca079d2441b4ddef0")
+;;; Generated autoloads from ../../../../.emacs.d/elpa/irony-20181218.2241/irony-cdb-json.el
 
 (autoload 'irony-cdb-json "irony-cdb-json" "\
 
@@ -116,59 +109,42 @@ Select CDB that is most recently modified.
 
 \(fn)" t nil)
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "irony-cdb-json" '("irony-cdb-json--")))
-
 ;;;***
 
-;;;### (autoloads nil "irony-cdb-libclang" "irony-cdb-libclang.el"
-;;;;;;  (0 0 0 0))
-;;; Generated autoloads from irony-cdb-libclang.el
+;;;### (autoloads nil "irony-cdb-libclang" "../../../../.emacs.d/elpa/irony-20181218.2241/irony-cdb-libclang.el"
+;;;;;;  "5eaf57500cadaaacca6b3e5f674109e3")
+;;; Generated autoloads from ../../../../.emacs.d/elpa/irony-20181218.2241/irony-cdb-libclang.el
 
 (autoload 'irony-cdb-libclang "irony-cdb-libclang" "\
 
 
 \(fn COMMAND &rest ARGS)" nil nil)
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "irony-cdb-libclang" '("irony-cdb-libclang--")))
-
 ;;;***
 
-;;;### (autoloads nil "irony-completion" "irony-completion.el" (0
-;;;;;;  0 0 0))
-;;; Generated autoloads from irony-completion.el
+;;;### (autoloads nil "irony-completion" "../../../../.emacs.d/elpa/irony-20181218.2241/irony-completion.el"
+;;;;;;  "869f75ef70ee3d1f7787679b798c3db6")
+;;; Generated autoloads from ../../../../.emacs.d/elpa/irony-20181218.2241/irony-completion.el
 
 (autoload 'irony-completion-at-point "irony-completion" "\
 
 
 \(fn)" nil nil)
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "irony-completion" '("irony-")))
-
 ;;;***
 
-;;;### (autoloads nil "irony-diagnostics" "irony-diagnostics.el"
-;;;;;;  (0 0 0 0))
-;;; Generated autoloads from irony-diagnostics.el
-
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "irony-diagnostics" '("irony-diagnostics-")))
-
-;;;***
-
-;;;### (autoloads nil "irony-iotask" "irony-iotask.el" (0 0 0 0))
-;;; Generated autoloads from irony-iotask.el
-
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "irony-iotask" '("irony-iotask-")))
-
-;;;***
-
-;;;### (autoloads nil "irony-snippet" "irony-snippet.el" (0 0 0 0))
-;;; Generated autoloads from irony-snippet.el
-
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "irony-snippet" '("irony-snippet-")))
-
-;;;***
-
-;;;### (autoloads nil nil ("irony-pkg.el") (0 0 0 0))
+;;;### (autoloads nil nil ("../../../../.emacs.d/elpa/irony-20181218.2241/irony-autoloads.el"
+;;;;;;  "../../../../.emacs.d/elpa/irony-20181218.2241/irony-cdb-clang-complete.el"
+;;;;;;  "../../../../.emacs.d/elpa/irony-20181218.2241/irony-cdb-json.el"
+;;;;;;  "../../../../.emacs.d/elpa/irony-20181218.2241/irony-cdb-libclang.el"
+;;;;;;  "../../../../.emacs.d/elpa/irony-20181218.2241/irony-cdb.el"
+;;;;;;  "../../../../.emacs.d/elpa/irony-20181218.2241/irony-completion.el"
+;;;;;;  "../../../../.emacs.d/elpa/irony-20181218.2241/irony-diagnostics.el"
+;;;;;;  "../../../../.emacs.d/elpa/irony-20181218.2241/irony-iotask.el"
+;;;;;;  "../../../../.emacs.d/elpa/irony-20181218.2241/irony-pkg.el"
+;;;;;;  "../../../../.emacs.d/elpa/irony-20181218.2241/irony-snippet.el"
+;;;;;;  "../../../../.emacs.d/elpa/irony-20181218.2241/irony.el")
+;;;;;;  (23601 59681 889995 245000))
 
 ;;;***
 
@@ -176,6 +152,5 @@ Select CDB that is most recently modified.
 ;; version-control: never
 ;; no-byte-compile: t
 ;; no-update-autoloads: t
-;; coding: utf-8
 ;; End:
 ;;; irony-autoloads.el ends here

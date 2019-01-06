@@ -1,20 +1,11 @@
 ;;; ivy-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-
-(add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory #$) (car load-path))))
-
+(add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "colir" "colir.el" (0 0 0 0))
-;;; Generated autoloads from colir.el
-
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "colir" '("colir-")))
-
-;;;***
-
-;;;### (autoloads nil "ivy" "ivy.el" (0 0 0 0))
-;;; Generated autoloads from ivy.el
+;;;### (autoloads nil "ivy" "../../../../.emacs.d/elpa/ivy-20181223.2002/ivy.el"
+;;;;;;  "afb064c1102ca5c31326e51cf5aeeecd")
+;;; Generated autoloads from ../../../../.emacs.d/elpa/ivy-20181223.2002/ivy.el
 
 (autoload 'ivy-resume "ivy" "\
 Resume the last completion session.
@@ -131,18 +122,14 @@ Switch to another buffer in another window.
 
 \(fn)" t nil)
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "ivy" '("ivy-" "with-ivy-window")))
-
 ;;;***
 
-;;;### (autoloads nil "ivy-overlay" "ivy-overlay.el" (0 0 0 0))
-;;; Generated autoloads from ivy-overlay.el
-
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "ivy-overlay" '("ivy-")))
-
-;;;***
-
-;;;### (autoloads nil nil ("ivy-pkg.el") (0 0 0 0))
+;;;### (autoloads nil nil ("../../../../.emacs.d/elpa/ivy-20181223.2002/colir.el"
+;;;;;;  "../../../../.emacs.d/elpa/ivy-20181223.2002/ivy-autoloads.el"
+;;;;;;  "../../../../.emacs.d/elpa/ivy-20181223.2002/ivy-overlay.el"
+;;;;;;  "../../../../.emacs.d/elpa/ivy-20181223.2002/ivy-pkg.el"
+;;;;;;  "../../../../.emacs.d/elpa/ivy-20181223.2002/ivy.el") (23601
+;;;;;;  59699 383611 966000))
 
 ;;;***
 
@@ -150,6 +137,5 @@ Switch to another buffer in another window.
 ;; version-control: never
 ;; no-byte-compile: t
 ;; no-update-autoloads: t
-;; coding: utf-8
 ;; End:
 ;;; ivy-autoloads.el ends here

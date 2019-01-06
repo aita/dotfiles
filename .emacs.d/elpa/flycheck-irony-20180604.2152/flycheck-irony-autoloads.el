@@ -1,14 +1,11 @@
 ;;; flycheck-irony-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-
-(add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory #$) (car load-path))))
-
+(add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "flycheck-irony" "flycheck-irony.el" (0 0 0
-;;;;;;  0))
-;;; Generated autoloads from flycheck-irony.el
+;;;### (autoloads nil "flycheck-irony" "../../../../.emacs.d/elpa/flycheck-irony-20180604.2152/flycheck-irony.el"
+;;;;;;  "6b0cec12d00c8f424f8c6b60d2f77cdb")
+;;; Generated autoloads from ../../../../.emacs.d/elpa/flycheck-irony-20180604.2152/flycheck-irony.el
 
 (autoload 'flycheck-irony-setup "flycheck-irony" "\
 Setup Flycheck Irony.
@@ -17,7 +14,11 @@ Add `irony' to `flycheck-checkers'.
 
 \(fn)" t nil)
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "flycheck-irony" '("flycheck-irony-")))
+;;;***
+
+;;;### (autoloads nil nil ("../../../../.emacs.d/elpa/flycheck-irony-20180604.2152/flycheck-irony-autoloads.el"
+;;;;;;  "../../../../.emacs.d/elpa/flycheck-irony-20180604.2152/flycheck-irony.el")
+;;;;;;  (23601 59758 692446 864000))
 
 ;;;***
 
@@ -25,6 +26,5 @@ Add `irony' to `flycheck-checkers'.
 ;; version-control: never
 ;; no-byte-compile: t
 ;; no-update-autoloads: t
-;; coding: utf-8
 ;; End:
 ;;; flycheck-irony-autoloads.el ends here

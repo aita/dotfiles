@@ -1,13 +1,11 @@
 ;;; company-irony-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-
-(add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory #$) (car load-path))))
-
+(add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "company-irony" "company-irony.el" (0 0 0 0))
-;;; Generated autoloads from company-irony.el
+;;;### (autoloads nil "company-irony" "../../../../.emacs.d/elpa/company-irony-20170905.2046/company-irony.el"
+;;;;;;  "fe3df13eb81e97e7477c12c882ff1264")
+;;; Generated autoloads from ../../../../.emacs.d/elpa/company-irony-20170905.2046/company-irony.el
 
 (autoload 'company-irony "company-irony" "\
 
@@ -25,7 +23,11 @@ include these commands by default.
 
 \(fn)" nil nil)
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "company-irony" '("company-irony-")))
+;;;***
+
+;;;### (autoloads nil nil ("../../../../.emacs.d/elpa/company-irony-20170905.2046/company-irony-autoloads.el"
+;;;;;;  "../../../../.emacs.d/elpa/company-irony-20170905.2046/company-irony.el")
+;;;;;;  (23601 59685 399835 731000))
 
 ;;;***
 
@@ -33,6 +35,5 @@ include these commands by default.
 ;; version-control: never
 ;; no-byte-compile: t
 ;; no-update-autoloads: t
-;; coding: utf-8
 ;; End:
 ;;; company-irony-autoloads.el ends here

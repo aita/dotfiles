@@ -1,13 +1,11 @@
 ;;; rtags-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-
-(add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory #$) (car load-path))))
-
+(add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "rtags" "rtags.el" (0 0 0 0))
-;;; Generated autoloads from rtags.el
+;;;### (autoloads nil "rtags" "../../../../.emacs.d/elpa/rtags-20181205.1639/rtags.el"
+;;;;;;  "43c9c3e015470d796b019cecc3e87caf")
+;;; Generated autoloads from ../../../../.emacs.d/elpa/rtags-20181205.1639/rtags.el
 
 (autoload 'rtags-set-periodic-reparse-timeout "rtags" "\
 Set `rtags-periodic-reparse-timeout' to TIME.
@@ -520,7 +518,11 @@ the user enter missing field manually.
 
 \(fn)" t nil)
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "rtags" '("rtags-")))
+;;;***
+
+;;;### (autoloads nil nil ("../../../../.emacs.d/elpa/rtags-20181205.1639/rtags-autoloads.el"
+;;;;;;  "../../../../.emacs.d/elpa/rtags-20181205.1639/rtags.el")
+;;;;;;  (23601 59731 150673 881000))
 
 ;;;***
 
@@ -528,6 +530,5 @@ the user enter missing field manually.
 ;; version-control: never
 ;; no-byte-compile: t
 ;; no-update-autoloads: t
-;; coding: utf-8
 ;; End:
 ;;; rtags-autoloads.el ends here

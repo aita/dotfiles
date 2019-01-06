@@ -1,15 +1,11 @@
 ;;; smartrep-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-
-(add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory #$) (car load-path))))
-
+(add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "smartrep" "smartrep.el" (0 0 0 0))
-;;; Generated autoloads from smartrep.el
-
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "smartrep" '("smartrep-")))
+;;;### (autoloads nil nil ("../../../../.emacs.d/elpa/smartrep-20150509.230/smartrep-autoloads.el"
+;;;;;;  "../../../../.emacs.d/elpa/smartrep-20150509.230/smartrep.el")
+;;;;;;  (23601 60144 105243 29000))
 
 ;;;***
 
@@ -17,6 +13,5 @@
 ;; version-control: never
 ;; no-byte-compile: t
 ;; no-update-autoloads: t
-;; coding: utf-8
 ;; End:
 ;;; smartrep-autoloads.el ends here

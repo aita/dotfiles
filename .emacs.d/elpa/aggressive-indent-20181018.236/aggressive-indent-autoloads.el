@@ -1,14 +1,11 @@
 ;;; aggressive-indent-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-
-(add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory #$) (car load-path))))
-
+(add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "aggressive-indent" "aggressive-indent.el"
-;;;;;;  (0 0 0 0))
-;;; Generated autoloads from aggressive-indent.el
+;;;### (autoloads nil "aggressive-indent" "../../../../.emacs.d/elpa/aggressive-indent-20181018.236/aggressive-indent.el"
+;;;;;;  "b8de414f0bb679fe7ce332123be39be3")
+;;; Generated autoloads from ../../../../.emacs.d/elpa/aggressive-indent-20181018.236/aggressive-indent.el
 
 (autoload 'aggressive-indent-indent-defun "aggressive-indent" "\
 Indent current defun.
@@ -57,7 +54,11 @@ See `aggressive-indent-mode' for more information on Aggressive-Indent mode.
 
 (defalias 'aggressive-indent-global-mode #'global-aggressive-indent-mode)
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "aggressive-indent" '("aggressive-indent-")))
+;;;***
+
+;;;### (autoloads nil nil ("../../../../.emacs.d/elpa/aggressive-indent-20181018.236/aggressive-indent-autoloads.el"
+;;;;;;  "../../../../.emacs.d/elpa/aggressive-indent-20181018.236/aggressive-indent.el")
+;;;;;;  (23601 59797 682260 615000))
 
 ;;;***
 
@@ -65,6 +66,5 @@ See `aggressive-indent-mode' for more information on Aggressive-Indent mode.
 ;; version-control: never
 ;; no-byte-compile: t
 ;; no-update-autoloads: t
-;; coding: utf-8
 ;; End:
 ;;; aggressive-indent-autoloads.el ends here
