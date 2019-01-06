@@ -1,0 +1,43 @@
+;; -*- mode: emacs-lisp; coding: emacs-mule; -*-
+;; --------------------------------------------------------------------------
+;; Desktop File for Emacs
+;; --------------------------------------------------------------------------
+;; Created Sun Jan  6 20:21:36 2019
+;; Desktop file format version 208
+;; Emacs version 26.1
+
+;; Global section:
+(setq desktop-saved-frameset [frameset 1 (23601 58560 77886 0) (desktop . "208") "ryoaita@ryonombp.lan" nil nil ((((minibuffer . t) (font-backend mac-ct) (fontsize . 0) (font . "-*-Menlo-normal-normal-normal-*-12-*-*-*-m-0-iso10646-1") (border-width . 0) (internal-border-width . 2) (right-divider-width . 0) (bottom-divider-width . 0) (vertical-scroll-bars) (horizontal-scroll-bars) (foreground-color . "#e1e1e0") (background-color . "#2d3743") (line-spacing) (left-fringe . 8) (right-fringe . 8) (no-special-glyphs) (undecorated) (ns-appearance . unbound) (ns-transparent-titlebar . unbound) (z-group) (no-focus-on-map) (no-accept-focus) (menu-bar-lines . 0) (tool-bar-lines . 0) (title) (icon-type) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 0) (scroll-bar-height . 0) (alpha) (fullscreen) (display-type . color) (background-mode . dark) (cursor-color . "#415160") (environment) (frameset--id . "AC17-8692-956F-19A1") (frameset--mini t . t) (modeline . t) (unsplittable) (icon-name) (visibility . t) (display . "ryonombp.lan") (explicit-name) (tool-bar-position . top) (height . 71) (width . 190) (left . 251) (top . 23)) ((min-height . 4) (min-width . 20) (min-height-ignore . 2) (min-width-ignore . 20) (min-height-safe . 1) (min-width-safe . 4) (min-pixel-height . 56) (min-pixel-width . 140) (min-pixel-height-ignore . 28) (min-pixel-width-ignore . 140) (min-pixel-height-safe . 14) (min-pixel-width-safe . 28)) hc (pixel-width . 1346) (pixel-height . 980) (total-width . 192) (total-height . 70) (normal-height . 1.0) (normal-width . 1.0) (combination-limit) (leaf (pixel-width . 672) (pixel-height . 980) (total-width . 96) (total-height . 70) (normal-height . 1.0) (normal-width . 0.49925705794947994) (buffer "hello.c" (selected . t) (hscroll . 0) (fringes 8 8 nil) (margins 5) (scroll-bars nil 0 t nil 0 t) (vscroll . 0) (dedicated) (point . 1) (start . 1))) (leaf (last . t) (pixel-width . 674) (pixel-height . 980) (total-width . 96) (total-height . 70) (normal-height . 1.0) (normal-width . 0.5007429420505201) (buffer "*irony-server build*" (selected) (hscroll . 0) (fringes 8 8 nil) (margins 5) (scroll-bars nil 0 t nil 0 t) (vscroll . 0) (dedicated) (point . 1) (start . 1)))))])
+(setq desktop-missing-file-warning nil)
+(setq tags-file-name nil)
+(setq tags-table-list nil)
+(setq search-ring nil)
+(setq regexp-search-ring '("3i"))
+(setq register-alist nil)
+(setq file-name-history '("/Users/ryoaita/junks/hello.c" "/Users/ryoaita/.emacs.d/init.el" "/Users/ryoaita/.emacs.d/" "/Users/ryoaita/workspace/memcached/memcached.c" "/Users/ryoaita/workspace/memcached/" "/Users/ryoaita/workspace/"))
+
+;; Buffer section -- buffers listed in same order as in buffer list:
+(desktop-create-buffer 208
+  "/Users/ryoaita/junks/hello.c"
+  "hello.c"
+  'c-mode
+  '(abbrev-mode linum-mode ivy-mode undo-tree-mode global-whitespace-mode smartparens-mode company-mode irony-mode flycheck-mode aggressive-indent-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 23601 58523 132060 0) (buffer-file-coding-system . undecided-unix))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/Users/ryoaita/.emacs.d/init.el"
+  "init.el"
+  'emacs-lisp-mode
+  '(eldoc-mode linum-mode ivy-mode undo-tree-mode global-whitespace-mode smartparens-mode company-mode flycheck-mode)
+  1959
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 23601 58512 60449 0) (buffer-file-coding-system . utf-8-unix))
+  '((mark-ring nil)))
+

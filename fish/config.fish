@@ -14,11 +14,11 @@ set -g fish_user_paths "$HOME/.cargo/bin" $fish_user_paths
 # $HOME/.local
 set -g fish_user_paths "$HOME/.local/bin" $fish_user_paths
 
-# LLVM
-set -g fish_user_paths "/usr/local/opt/llvm/bin" $fish_user_paths
-set -gx LDFLAGS "-L/usr/local/opt/llvm/lib" $LDFLAGS
-set -gx CPPFLAGS "-I/usr/local/opt/llvm/include" $CPPFLAGS
-set -gx CFLAGS "-I/usr/local/opt/llvm/include" $CFLAGS
+# # LLVM
+# set -g fish_user_paths "/usr/local/opt/llvm/bin" $fish_user_paths
+# set -gx LDFLAGS "-L/usr/local/opt/llvm/lib" $LDFLAGS
+# set -gx CPPFLAGS "-I/usr/local/opt/llvm/include" $CPPFLAGS
+# set -gx CFLAGS "-I/usr/local/opt/llvm/include" $CFLAGS
 
 # Python
 set -g fish_user_paths "$HOME/Library/Python/3.7/bin" $fish_user_paths
