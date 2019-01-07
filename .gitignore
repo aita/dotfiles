@@ -1,5 +1,6 @@
 .DS_Store
 Thumbs.db
+*.lock
 
 # Swap
 [._]*.s[a-v][a-z]
