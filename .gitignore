@@ -21,4 +21,8 @@ tags
 
 fish/fishd.*
 fish/fish_universal_variables
+
+.emacs.d/elpa
 .emacs.d/irony
+.emacs.d/.emacs.desktop
+.emacs.d/auto-save-list
