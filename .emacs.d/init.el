@@ -120,6 +120,10 @@
 ;; smatparens
 ;; カッコを自動補完
 (smartparens-global-mode t)
+(add-hook 'emacs-lisp-mode-hook
+          '(lambda ()
+             (sp-pair "'" nil :actions :rem)))
+
 
 ;; expand-region
 (global-set-key (kbd "C-@") 'er/expand-region)
