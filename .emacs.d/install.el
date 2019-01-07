@@ -1,4 +1,4 @@
-(defvar custom-file (expand-file-name "custom.el" user-emacs-directory))
+(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (when (file-exists-p custom-file)
   (load custom-file)
 
@@ -10,4 +10,4 @@
 
   (dolist (package package-selected-packages)
     (unless (package-installed-p package)
-    (package-install package))))
+      (package-install package))))
