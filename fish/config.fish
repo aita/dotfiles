@@ -9,11 +9,11 @@ set -x fish_user_paths "$GOPATH/bin" $fish_user_paths
 # Rust
 set -x fish_user_paths $HOME/.cargo/bin $fish_user_paths
 
-# Haskell
-set -x fish_user_paths (stack path --compiler-bin) $fish_user_paths
+# # Haskell
+# set -x fish_user_paths (stack path --compiler-bin) $fish_user_paths
 
-# Rust
-set -x fish_user_paths "$HOME/.cargo/bin" $fish_user_paths
+# # Rust
+# set -x fish_user_paths "$HOME/.cargo/bin" $fish_user_paths
 
 # $HOME/.local
 set -x fish_user_paths "$HOME/.local/bin" $fish_user_paths

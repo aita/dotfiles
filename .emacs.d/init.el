@@ -88,8 +88,6 @@
 ;; $PATHをシェルの設定から引き継ぐ
 (exec-path-from-shell-initialize)
 
-
-
 ;; 行末の空白を保存時に消す
 (require 'whitespace)
 (setq whitespace-style
