@@ -42,6 +42,7 @@
 
 ;; 現在行をハイライト
 (global-hl-line-mode)
+(add-hook 'term-mode-hook '(lambda () (setq-local global-hl-line-mode nil)))
 
 ;; テーマの設定
 (load-theme 'misterioso t)

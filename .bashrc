@@ -142,7 +142,3 @@ alias pip=pip3
 
 # # append to history, don't overwrite it
 shopt -u histappend
-
-
-# fasd
-eval "$(fasd --init auto)"
