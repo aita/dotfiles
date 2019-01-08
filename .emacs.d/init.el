@@ -72,6 +72,11 @@
 ;; 終了時の状態を保存する
 (desktop-save-mode t)
 
+;; ログインシェルによらずシェルをbashにする
+(setenv "SHELL" "/bin/bash")
+(setq explicit-shell-file-name "/bin/bash")
+
+
 ;; MELPAをパッケージレポジトリに追加
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
@@ -82,9 +87,8 @@
 (when (file-exists-p custom-file)
   (load custom-file))
 
-
 ;; projectile
-(projectile-global-mode)
+(projectile-mode t)
 
 ;; undo-tree
 (global-undo-tree-mode t)
@@ -165,9 +169,13 @@
 ;; flycheck 構文チェックの有効化
 (add-hook 'after-init-hook #'global-flycheck-mode)
 
+;; quickrun
+(global-set-key (kbd "<f5>") 'quickrun)
+
 ;; company-modeを有効にする
 (require 'company)
 (add-hook 'after-init-hook 'global-company-mode)
+(add-hook 'shell-mode-hook (lambda () (company-mode -1)))
 (setq company-idle-delay 0)
 (setq company-minimum-prefix-length 1)
 (setq company-selection-wrap-around t)
@@ -219,3 +227,11 @@
              ;; (define-key c-mode-base-map (kbd "C-,") 'rtags-find-references)
              ;; (define-key c-mode-base-map (kbd "C-<") 'rtags-find-virtuals-at-point)
              ))
+
+;; semantic
+(semantic-mode 1) ;; -> this is optional for Lisp
+(define-key c-mode-base-map (kbd "M-RET") 'srefactor-refactor-at-point)
+(global-set-key (kbd "M-RET o") 'srefactor-lisp-one-line)
+(global-set-key (kbd "M-RET m") 'srefactor-lisp-format-sexp)
+(global-set-key (kbd "M-RET d") 'srefactor-lisp-format-defun)
+(global-set-key (kbd "M-RET b") 'srefactor-lisp-format-buffer)

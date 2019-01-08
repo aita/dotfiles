@@ -29,3 +29,4 @@ fish/fish_universal_variables
 .emacs.d/irony
 .emacs.d/.emacs.desktop
 .emacs.d/auto-save-list
+.emacs.d/srecode-map.el
