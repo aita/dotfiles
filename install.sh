@@ -5,7 +5,6 @@ UNAME=`uname`
 
 ln -sv $ROOT_DIR/.gitconfig $HOME
 ln -sv $ROOT_DIR/.bashrc $HOME
-ln -sv $ROOT_DIR/.bash_profile $HOME
 ln -sv $ROOT_DIR/.emacs.d $HOME
 
 mkdir -v $HOME/.config
