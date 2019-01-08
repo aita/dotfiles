@@ -97,14 +97,19 @@
 ;; $PATHをシェルの設定から引き継ぐ
 (exec-path-from-shell-initialize)
 
+;; editorconfig
+(editorconfig-mode t)
+
+;; neotree
+(global-set-key (kbd "<f8>") 'neotree-toggle)
+(setq projectile-switch-project-action 'neotree-projectile-action)
+
 ;; ivyの設定
 (ivy-mode 1)
-
+(setq ivy-count-format "(%d/%d) ")
 ;; ディレクトリを選択してRETURNキーを押したとき確定させずに、ディレクトリのファイルを候補にする
 (define-key ivy-minibuffer-map (kbd "RET") #'ivy-alt-done)
 (define-key ivy-minibuffer-map (kbd "C-j") #'ivy-immediate-done)
-
-(setq ivy-count-format "(%d/%d) ")
 
 (global-set-key "\C-s" 'swiper)
 (global-set-key (kbd "C-c C-r") 'ivy-resume)
@@ -123,7 +128,6 @@
 ;; (global-set-key (kbd "C-S-o") 'counsel-rhythmbox)
 (define-key minibuffer-local-map (kbd "C-r") 'counsel-minibuffer-history)
 
-
 ;; 行末の空白を保存時に消す
 (require 'whitespace)
 (setq whitespace-style
@@ -137,9 +141,6 @@
 (add-hook 'emacs-lisp-mode-hook
           '(lambda ()
              (sp-pair "'" nil :actions :rem)))
-
-;; editorconfig
-(editorconfig-mode t)
 
 ;; expand-region
 (global-set-key (kbd "C-@") 'er/expand-region)
@@ -165,10 +166,6 @@
 (define-key company-active-map (kbd "C-n") 'company-select-next)
 (define-key company-active-map (kbd "C-p") 'company-select-previous)
 (define-key company-active-map (kbd "C-h") nil)
-
-;; neotree
-(global-set-key (kbd "<f8>") 'neotree-toggle)
-(setq projectile-switch-project-action 'neotree-projectile-action)
 
 ;; diminish
 (diminish 'abbrev-mode "Abv")
