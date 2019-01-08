@@ -30,3 +30,4 @@ fish/fish_universal_variables
 .emacs.d/.emacs.desktop
 .emacs.d/auto-save-list
 .emacs.d/srecode-map.el
+.emacs.d/semanticdb

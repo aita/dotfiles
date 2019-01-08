@@ -186,6 +186,15 @@
 (define-key company-active-map (kbd "C-p") 'company-select-previous)
 (define-key company-active-map (kbd "C-h") nil)
 
+;; diminish
+(diminish 'abbrev-mode "Abv")
+(diminish 'company-mode)
+(diminish 'editorconfig-mode)
+(diminish 'ivy-mode)
+(diminish 'undo-tree-mode)
+(diminish 'projectile-mode)
+(diminish 'whitespace-mode)
+
 ;; C/C++
 ;; Coding Style
 (setq-default c-default-style "linux"
