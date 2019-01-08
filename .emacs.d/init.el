@@ -124,6 +124,8 @@
           '(lambda ()
              (sp-pair "'" nil :actions :rem)))
 
+;; editorconfig
+(editorconfig-mode t)
 
 ;; expand-region
 (global-set-key (kbd "C-@") 'er/expand-region)
@@ -168,6 +170,15 @@
 (define-key company-active-map (kbd "C-h") nil)
 
 ;; C/C++
+;; Coding Style
+(setq-default c-default-style "linux"
+              c-basic-offset 4
+              c++-indent-level 4
+              indent-tabs-mode nil)
+
+;; GDB
+(setq gdb-many-windows 1)
+
 ;; aggressive-indent-mode
 (add-hook 'c-mode-common-hook #'aggressive-indent-mode)
 
@@ -199,37 +210,3 @@
              ;; (define-key c-mode-base-map (kbd "C-,") 'rtags-find-references)
              ;; (define-key c-mode-base-map (kbd "C-<") 'rtags-find-virtuals-at-point)
              ))
-
-;; LLVM Coding Style
-(defun llvm-lineup-statement (langelem)
-  (let ((in-assign (c-lineup-assignments langelem)))
-    (if (not in-assign)
-        '++
-      (aset in-assign 0
-            (+ (aref in-assign 0)
-               (* 2 c-basic-offset)))
-      in-assign)))
-
-;; Add a cc-mode style for editing LLVM C and C++ code
-(c-add-style "llvm.org"
-             '("gnu"
-               (fill-column . 80)
-               (c++-indent-level . 2)
-               (c-basic-offset . 2)
-               (indent-tabs-mode . nil)
-               (c-offsets-alist . ((arglist-intro . ++)
-                                   (innamespace . 0)
-                                   (member-init-intro . ++)
-                                   (statement-cont . llvm-lineup-statement)))))
-
-;; Files with "llvm" in their names will automatically be set to the
-;; llvm.org coding style.
-(add-hook 'c-mode-common-hook
-          (function
-           (lambda nil
-             (if (string-match "llvm" buffer-file-name)
-                 (progn
-                   (c-set-style "llvm.org"))))))
-
-;; GDB
-(setq gdb-many-windows 1)
