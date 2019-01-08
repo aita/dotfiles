@@ -196,6 +196,8 @@
 (diminish 'whitespace-mode)
 
 ;; C/C++
+(require 'cc-mode)
+
 ;; Coding Style
 (setq-default c-default-style "linux"
               c-basic-offset 4
@@ -226,16 +228,13 @@
 (setq rtags-display-result-backend 'ivy)
 
 ;; rtagsのキーバインドを追加
-(add-hook 'c-mode-common-hook
-          '(lambda ()
-             (define-key c-mode-base-map (kbd "M-.") 'rtags-find-symbol-at-point)
-             (define-key c-mode-base-map (kbd "M-@") 'rtags-find-references-at-point)
-             (define-key c-mode-base-map (kbd "M-,") 'rtags-location-stack-back)
-             (define-key c-mode-base-map (kbd "M-;") 'rtags-find-file)
-             ;; (define-key c-mode-base-map (kbd "C-.") 'rtags-find-symbol)
-             ;; (define-key c-mode-base-map (kbd "C-,") 'rtags-find-references)
-             ;; (define-key c-mode-base-map (kbd "C-<") 'rtags-find-virtuals-at-point)
-             ))
+(define-key c-mode-base-map (kbd "M-.") 'rtags-find-symbol-at-point)
+(define-key c-mode-base-map (kbd "M-@") 'rtags-find-references-at-point)
+(define-key c-mode-base-map (kbd "M-,") 'rtags-location-stack-back)
+(define-key c-mode-base-map (kbd "M-;") 'rtags-find-file)
+;; (define-key c-mode-base-map (kbd "C-.") 'rtags-find-symbol)
+;; (define-key c-mode-base-map (kbd "C-,") 'rtags-find-references)
+;; (define-key c-mode-base-map (kbd "C-<") 'rtags-find-virtuals-at-point)
 
 ;; semantic
 (semantic-mode 1) ;; -> this is optional for Lisp
@@ -244,3 +243,13 @@
 (global-set-key (kbd "M-RET m") 'srefactor-lisp-format-sexp)
 (global-set-key (kbd "M-RET d") 'srefactor-lisp-format-defun)
 (global-set-key (kbd "M-RET b") 'srefactor-lisp-format-buffer)
+
+;; 保存時にclang-formatでフォーマットする
+(defun clang-format-buffer-if-exists ()
+  "Reformat buffer if .clang-format exists in the projectile root."
+  (when (file-exists-p (expand-file-name ".clang-format" (projectile-project-root)))
+    (clang-format-buffer)))
+
+(add-hook 'c-mode-common-hook
+          '(lambda ()
+             (add-hook 'before-save-hook 'clang-format-buffer-if-exists)))
