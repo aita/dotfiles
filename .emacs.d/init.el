@@ -175,8 +175,8 @@
 ;; company-modeを有効にする
 (require 'company)
 (add-hook 'after-init-hook 'global-company-mode)
-(add-hook 'shell-mode-hook (lambda () (company-mode -1)))
-(setq company-idle-delay 0)
+; (add-hook 'shell-mode-hook (lambda () (company-mode -1)))
+(setq company-idle-delay 0.1)
 (setq company-minimum-prefix-length 1)
 (setq company-selection-wrap-around t)
 ;; キーバインドの変更
