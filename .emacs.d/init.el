@@ -187,6 +187,10 @@
 (define-key company-active-map (kbd "C-p") 'company-select-previous)
 (define-key company-active-map (kbd "C-h") nil)
 
+;; neotree
+(global-set-key (kbd "<f8>") 'neotree-toggle)
+(setq projectile-switch-project-action 'neotree-projectile-action)
+
 ;; diminish
 (diminish 'abbrev-mode "Abv")
 (diminish 'company-mode)
