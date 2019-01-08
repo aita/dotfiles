@@ -82,6 +82,10 @@
 (when (file-exists-p custom-file)
   (load custom-file))
 
+
+;; projectile
+(projectile-global-mode)
+
 ;; undo-tree
 (global-undo-tree-mode t)
 
@@ -90,6 +94,11 @@
 
 ;; ivyの設定
 (ivy-mode 1)
+
+;; ディレクトリを選択してRETURNキーを押したとき確定させずに、ディレクトリのファイルを候補にする
+(define-key ivy-minibuffer-map (kbd "RET") #'ivy-alt-done)
+(define-key ivy-minibuffer-map (kbd "C-j") #'ivy-immediate-done)
+
 (setq ivy-count-format "(%d/%d) ")
 
 (global-set-key "\C-s" 'swiper)
