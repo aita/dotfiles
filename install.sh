@@ -19,7 +19,7 @@ if [ $(uname -s) = "Darwin" ]; then
 fi;
 
 ln -sv fish $HOME/.config
-fish -c 'fisher install z 0rax/fish-bd spin'
+fish -c 'fisher install'
 
 # install emacs packages
 emacs --batch --no-init-file --load .emacs.d/install.el
