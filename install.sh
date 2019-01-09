@@ -1,23 +1,25 @@
 #!/bin/sh
 
 ROOT_DIR=$(cd $(dirname $0) && pwd)
-UNAME=`uname`
+CONF_DIR=$HOME/.config
 
-ln -sv $ROOT_DIR/.gitconfig $HOME
-ln -sv $ROOT_DIR/.bashrc $HOME
-ln -sv $ROOT_DIR/.emacs.d $HOME
+cd $ROOT_DIR
 
-mkdir -v $HOME/.config
-ln -sv $ROOT_DIR/nvim $HOME/.config
-ln -sv $ROOT_DIR/flake8 $HOME/.config
+ln -sv .gitconfig $HOME
+ln -sv .bashrc $HOME
+ln -sv .emacs.d $HOME
 
-ln -sv $ROOT_DIR/fish $HOME/.config
-fish -c 'fisher install z bd spin'
+mkdir -v $CONF_DIR
+ln -sv nvim $CONF_DIR
+ln -sv flake8 $CONF_DIR
+
+ln -sv .tmux.conf $HOME
+if [ $(uname -s) = "Darwin" ]; then
+    ln -sv .tmux.mac.conf $HOME
+fi;
+
+ln -sv fish $HOME/.config
+fish -c 'fisher install z 0rax/fish-bd spin'
 
 # install emacs packages
 emacs --batch --no-init-file --load .emacs.d/install.el
-
-ln -sv $ROOT_DIR/.tmux.conf $HOME
-if [ "$UNAME" = "Darwin" ]; then
-	ln -sv $ROOT_DIR/.tmux.mac.conf $HOME
-fi;

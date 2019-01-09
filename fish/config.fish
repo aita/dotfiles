@@ -3,20 +3,24 @@ alias vim nvim
 alias vi nvim
 
 # Go
-set -x GOPATH "$HOME/go"
-set -x fish_user_paths "$GOPATH/bin" $fish_user_paths
+if [ -x "(command -v go)" ]; then
+    set -x GOPATH "$HOME/go"
+    set -x fish_user_paths "$GOPATH/bin" $fish_user_paths
+end
 
 # Rust
-set -x fish_user_paths $HOME/.cargo/bin $fish_user_paths
+if [ -x "(command -v cargo)" ]; then
+    set -x fish_user_paths $HOME/.cargo/bin $fish_user_paths
+end
 
 # $HOME/.local
 set -x fish_user_paths "$HOME/.local/bin" $fish_user_paths
 
-# Python
-set -x fish_user_paths "$HOME/Library/Python/3.7/bin" $fish_user_paths
-
 
 if [ (uname -s) = "Darwin" ]
+    # Python
+    set -x fish_user_paths "$HOME/Library/Python/3.7/bin" $fish_user_paths
+
     # findutils
     set -x fish_user_paths "/usr/local/opt/findutils/libexec/gnubin" $fish_user_paths
     set -x MANPATH "/usr/local/opt/findutils/libexec/gnuman" $MANPATH
