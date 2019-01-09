@@ -236,3 +236,12 @@
                        '(lambda ()
                           (when (file-exists-p (expand-file-name ".clang-format" (projectile-project-root)))
                             (clang-format-buffer))))))
+
+
+;; OCaml
+(add-hook 'tuareg-mode-hook 'merlin-mode)
+
+(require 'ocp-indent)
+(add-hook 'tuareg-mode-hook
+     '(lambda ()
+        (add-hook 'local-write-file-hooks 'ocp-indent-buffer)))
