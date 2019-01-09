@@ -138,9 +138,10 @@
 ;; smatparens
 ;; カッコを自動補完
 (smartparens-global-mode t)
-(add-hook 'emacs-lisp-mode-hook
-          '(lambda ()
-             (sp-pair "'" nil :actions :rem)))
+(sp-local-pair 'emacs-lisp-mode "'" nil :actions)
+;; "{" の入力の後に改行されるようにする
+(sp-local-pair 'c-mode "{" nil :post-handlers '(:add "\n||\n[i]"))
+(sp-local-pair 'c++-mode "{" nil :post-handlers '(:add "\n||\n[i]"))
 
 ;; expand-region
 (global-set-key (kbd "C-@") 'er/expand-region)
@@ -181,6 +182,9 @@
 
 ;; C/C++
 (require 'cc-mode)
+(add-hook 'c-mode-hook
+          '(lambda ()
+             (c-toggle-electric-state -1)))
 
 ;; Coding Style
 (setq-default c-default-style "linux"
@@ -190,9 +194,6 @@
 
 ;; GDB
 (setq gdb-many-windows 1)
-
-;; aggressive-indent-mode
-(add-hook 'c-mode-common-hook #'aggressive-indent-mode)
 
 ;; irony-mode
 (add-hook 'c++-mode-hook 'irony-mode)
