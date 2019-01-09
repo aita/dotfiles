@@ -5,7 +5,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (iedit neotree shell-pop cmake-mode company-irony-c-headers clang-format diminish magit srefactor quickrun editorconfig bison-mode fish-mode undo-tree smartparens rtags projectile flycheck-irony expand-region exec-path-from-shell counsel company-irony aggressive-indent)))
+    (tuareg ocp-indent caml merlin merlin-eldoc iedit neotree shell-pop cmake-mode company-irony-c-headers clang-format diminish magit srefactor quickrun editorconfig bison-mode fish-mode undo-tree smartparens rtags projectile flycheck-irony expand-region exec-path-from-shell counsel company-irony aggressive-indent)))
  '(semantic-mode t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

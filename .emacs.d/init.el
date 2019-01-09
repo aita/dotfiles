@@ -143,8 +143,8 @@
              (sp-pair "'" nil :actions :rem)))
 
 ;; expand-region
-(egobal-set-key (kbd "C-@") 'er/expand-region)
-(egobal-set-key (kbd "C-M-@") 'er/contract-region) ; リージョンを狭める
+(global-set-key (kbd "C-@") 'er/expand-region)
+(global-set-key (kbd "C-M-@") 'er/contract-region) ; リージョンを狭める
 (transient-mark-mode t)
 
 ;; iedit
@@ -154,7 +154,7 @@
 (add-hook 'after-init-hook #'global-flycheck-mode)
 
 ;; quickrun
-(egobal-set-key (kbd "<f5>") 'quickrun)
+(global-set-key (kbd "<f5>") 'quickrun)
 
 ;; company-modeを有効にする
 (require 'company)
@@ -223,17 +223,15 @@
 ;; semantic
 (semantic-mode 1) ;; -> this is optional for Lisp
 (define-key c-mode-base-map (kbd "M-RET") 'srefactor-refactor-at-point)
-(egobal-set-key (kbd "M-RET o") 'srefactor-lisp-one-line)
-(egobal-set-key (kbd "M-RET m") 'srefactor-lisp-format-sexp)
-(egobal-set-key (kbd "M-RET d") 'srefactor-lisp-format-defun)
-(egobal-set-key (kbd "M-RET b") 'srefactor-lisp-format-buffer)
+(global-set-key (kbd "M-RET o") 'srefactor-lisp-one-line)
+(global-set-key (kbd "M-RET m") 'srefactor-lisp-format-sexp)
+(global-set-key (kbd "M-RET d") 'srefactor-lisp-format-defun)
+(global-set-key (kbd "M-RET b") 'srefactor-lisp-format-buffer)
 
 ;; 保存時にclang-formatでフォーマットする
-(defun clang-format-buffer-if-exists ()
-  "Reformat buffer if .clang-format exists in the projectile root."
-  (when (file-exists-p (expand-file-name ".clang-format" (projectile-project-root)))
-    (clang-format-buffer)))
-
 (add-hook 'c-mode-common-hook
           '(lambda ()
-             (add-hook 'before-save-hook 'clang-format-buffer-if-exists)))
+             (add-hook 'local-write-file-hooks
+                       '(lambda ()
+                          (when (file-exists-p (expand-file-name ".clang-format" (projectile-project-root)))
+                            (clang-format-buffer))))))
