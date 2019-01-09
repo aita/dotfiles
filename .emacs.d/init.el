@@ -143,15 +143,18 @@
              (sp-pair "'" nil :actions :rem)))
 
 ;; expand-region
-(global-set-key (kbd "C-@") 'er/expand-region)
-(global-set-key (kbd "C-M-@") 'er/contract-region) ;; リージョンを狭める
+(egobal-set-key (kbd "C-@") 'er/expand-region)
+(egobal-set-key (kbd "C-M-@") 'er/contract-region) ; リージョンを狭める
 (transient-mark-mode t)
+
+;; iedit
+(require 'iedit)            ; 読み込まないとキーバインドが設定されない
 
 ;; flycheck 構文チェックの有効化
 (add-hook 'after-init-hook #'global-flycheck-mode)
 
 ;; quickrun
-(global-set-key (kbd "<f5>") 'quickrun)
+(egobal-set-key (kbd "<f5>") 'quickrun)
 
 ;; company-modeを有効にする
 (require 'company)
@@ -220,10 +223,10 @@
 ;; semantic
 (semantic-mode 1) ;; -> this is optional for Lisp
 (define-key c-mode-base-map (kbd "M-RET") 'srefactor-refactor-at-point)
-(global-set-key (kbd "M-RET o") 'srefactor-lisp-one-line)
-(global-set-key (kbd "M-RET m") 'srefactor-lisp-format-sexp)
-(global-set-key (kbd "M-RET d") 'srefactor-lisp-format-defun)
-(global-set-key (kbd "M-RET b") 'srefactor-lisp-format-buffer)
+(egobal-set-key (kbd "M-RET o") 'srefactor-lisp-one-line)
+(egobal-set-key (kbd "M-RET m") 'srefactor-lisp-format-sexp)
+(egobal-set-key (kbd "M-RET d") 'srefactor-lisp-format-defun)
+(egobal-set-key (kbd "M-RET b") 'srefactor-lisp-format-buffer)
 
 ;; 保存時にclang-formatでフォーマットする
 (defun clang-format-buffer-if-exists ()
