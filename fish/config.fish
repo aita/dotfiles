@@ -1,4 +1,5 @@
 alias emacs "emacs -nw --no-desktop"
+alias emacs "emacsclient -t"
 alias vim nvim
 alias vi nvim
 
