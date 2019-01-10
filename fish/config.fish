@@ -1,4 +1,4 @@
-alias emacs emacs -nw --no-desktop
+alias emacs "emacs -nw --no-desktop"
 alias vim nvim
 alias vi nvim
 
