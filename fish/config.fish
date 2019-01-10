@@ -1,4 +1,4 @@
-# Vim
+alias emacs emacs -nw --no-desktop
 alias vim nvim
 alias vi nvim
 
@@ -13,8 +13,14 @@ if [ -x "(command -v cargo)" ]; then
     set -x fish_user_paths $HOME/.cargo/bin $fish_user_paths
 end
 
-# $HOME/.local
-set -x fish_user_paths "$HOME/.local/bin" $fish_user_paths
+if [ -x "$HOME/.opam" ]
+    # opam configuration
+    source /Users/ryo.aita/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
+end
+
+if [ -x "$HOME/.local" ]
+    set -x fish_user_paths "$HOME/.local/bin" $fish_user_paths
+end
 
 
 if [ (uname -s) = "Darwin" ]
@@ -36,9 +42,4 @@ if [ (uname -s) = "Darwin" ]
     # gnu grep
     set -x fish_user_paths "/usr/local/opt/grep/libexec/gnubin" $fish_user_paths
     set -x MANPATH "/usr/local/opt/grep/libexec/gnuman" $MANPATH
-end
-
-if [ -d "$HOME/.opam" ]
-    # opam configuration
-    source /Users/ryo.aita/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
 end
