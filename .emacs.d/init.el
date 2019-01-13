@@ -243,5 +243,5 @@
 
 (require 'ocp-indent)
 (add-hook 'tuareg-mode-hook
-     '(lambda ()
-        (add-hook 'local-write-file-hooks 'ocp-indent-buffer)))
+          '(lambda ()
+             (add-hook 'local-write-file-hooks 'ocp-indent-buffer)))
