@@ -3,13 +3,6 @@ alias emacs "emacsclient -t"
 alias vim nvim
 alias vi nvim
 
-
-# OPAM
-# if [ -x $HOME/.opam" ]
-#     # opaconfiguration
-#     source $HOME/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
-# end
-
 # Go
 if [ -x "(command -v go)" ]; then
     set -gx GOPATH "$HOME/go"
@@ -24,7 +17,6 @@ end
 if [ -x "$HOME/.local" ]
     set -gx fish_user_paths "$HOME/.local/bin" $fish_user_paths
 end
-
 
 if [ (uname -s) = "Darwin" ]
     # Python
@@ -45,4 +37,9 @@ if [ (uname -s) = "Darwin" ]
     # gnu grep
     set -gx fish_user_paths "/usr/local/opt/grep/libexec/gnubin" $fish_user_paths
     set -gx MANPATH "/usr/local/opt/grep/libexec/gnuman" $MANPATH
+end
+
+if [ -x "$HOME/.opam" ]
+    # opam configuration
+    source /Users/ryoaita/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
 end
