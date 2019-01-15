@@ -12,14 +12,12 @@ ln -sv .emacs.d $HOME
 mkdir -v $CONF_DIR
 ln -sv nvim $CONF_DIR
 ln -sv flake8 $CONF_DIR
-
 ln -sv .tmux.conf $HOME
 if [ $(uname -s) = "Darwin" ]; then
     ln -sv .tmux.mac.conf $HOME
 fi;
-
-ln -sv fish $HOME/.config
-fish -c 'fisher install'
+ln -sv $ROOT_DIR/fish $CONF_DIR
+fish -c 'fisher'
 
 # install emacs packages
 emacs --batch --no-init-file --load .emacs.d/install.el
