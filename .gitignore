@@ -24,6 +24,9 @@ tags
 
 fish/fishd.*
 fish/fish_universal_variables
+fish/completions
+fish/conf.d
+fish/functions
 
 .emacs.d/elpa
 .emacs.d/irony
