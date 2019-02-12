@@ -4,17 +4,17 @@ alias vim nvim
 alias vi nvim
 
 # Go
-if [ -x "(command -v go)" ]; then
+if test -e (command -v go)
     set -gx GOPATH "$HOME/go"
     set -gx fish_user_paths "$GOPATH/bin" $fish_user_paths
 end
 
 # Rust
-if [ -x "(command -v cargo)" ]; then
+if test -e (command -v cargo)
     set -gx fish_user_paths $HOME/.cargo/bin $fish_user_paths
 end
 
-if [ -x "$HOME/.local" ]
+if test -e "$HOME/.local"
     set -gx fish_user_paths "$HOME/.local/bin" $fish_user_paths
 end
 
@@ -39,7 +39,13 @@ if [ (uname -s) = "Darwin" ]
     set -gx MANPATH "/usr/local/opt/grep/libexec/gnuman" $MANPATH
 end
 
-if [ -x "$HOME/.opam" ]
+if test -e "$HOME/.opam"
     # opam configuration
-    source /Users/ryoaita/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
+    source $HOME/.opam/opam-init/init.fish >/dev/null 2>/dev/null
+    or true
+end
+
+if test -e "$HOME/.rbenv"
+    status --is-interactive
+    and source (rbenv init -|psub)
 end
