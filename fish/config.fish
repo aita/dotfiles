@@ -2,32 +2,38 @@
 alias emacs "emacs -nw --no-desktop"
 alias ec "emacsclient -t"
 
-# Python
-set -gx fish_user_paths /usr/local/opt/python/libexec/bin $fish_user_paths
-
-if test -e (command -v go)
-    set -gx GOPATH "$HOME/go"
-    set -gx fish_user_paths "$GOPATH/bin" $fish_user_paths
-end 
-
 # Go
-if test -e (command -v go)
+if command -v go
     set -gx GOPATH "$HOME/go"
     set -gx fish_user_paths "$GOPATH/bin" $fish_user_paths
 end
 
 # Rust
-if test -e (command -v cargo)
+if command -v cargo
     set -gx fish_user_paths $HOME/.cargo/bin $fish_user_paths
 end
 
-if test -e "$HOME/.local"
+if test -e "$HOME/.local/bin"
     set -gx fish_user_paths "$HOME/.local/bin" $fish_user_paths
 end
 
+if test -e "$HOME/.opam"
+    # opam configuration
+    source $HOME/.opam/opam-init/init.fish >/dev/null 2>/dev/null
+    or true
+end
+
+if test -e "$HOME/.rbenv"
+    status --is-interactive
+    and source (rbenv init -|psub)
+end
+
+
 if [ (uname -s) = "Darwin" ]
     # Python
-    set -gx fish_user_paths "$HOME/Library/Python/3.7/bin" $fish_user_paths
+    if test -e /usr/local/opt/python
+        set -gx fish_user_paths /usr/local/opt/python/libexec/bin $fish_user_paths
+    end
 
     # findutils
     set -gx fish_user_paths "/usr/local/opt/findutils/libexec/gnubin" $fish_user_paths
@@ -44,15 +50,4 @@ if [ (uname -s) = "Darwin" ]
     # gnu grep
     set -gx fish_user_paths "/usr/local/opt/grep/libexec/gnubin" $fish_user_paths
     set -gx MANPATH "/usr/local/opt/grep/libexec/gnuman" $MANPATH
-end
-
-if test -e "$HOME/.opam"
-    # opam configuration
-    source $HOME/.opam/opam-init/init.fish >/dev/null 2>/dev/null
-    or true
-end
-
-if test -e "$HOME/.rbenv"
-    status --is-interactive
-    and source (rbenv init -|psub)
 end
