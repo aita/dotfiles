@@ -1,7 +1,14 @@
+# Emacs
 alias emacs "emacs -nw --no-desktop"
 alias ec "emacsclient -t"
-alias vim nvim
-alias vi nvim
+
+# Python
+set -gx fish_user_paths /usr/local/opt/python/libexec/bin $fish_user_paths
+
+if test -e (command -v go)
+    set -gx GOPATH "$HOME/go"
+    set -gx fish_user_paths "$GOPATH/bin" $fish_user_paths
+end 
 
 # Go
 if test -e (command -v go)
